@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para los degradados */
+        .dashboard-bg {
+            /* Degradado de fondo violeta y rosa */
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            /* Asegura que el gradiente se vea más suave y con un toque oscuro como en la imagen */
+        }
+
+        .header-card {
+            /* Degradado más suave para las tarjetas internas */
+            background: linear-gradient(135deg, #fce0f9 0%, #e8eaf6 100%);
+        }
+
+        /* Simulamos el tema oscuro de VS Code para el sidebar */
+        .sidebar-bg {
+            background-color: #252526; /* Fondo de VS Code Sidebar */
+            color: #cccccc; /* Texto */
+            min-width: 200px; /* Ancho fijo para simular el panel */
+        }
+
+        /* Estilo para simular las líneas del gráfico (muy simplificado, idealmente usarías una librería) */
+        .chart-area {
+            height: 150px; /* Altura del área de gráfico */
+            background: rgba(255, 255, 255, 0.5); /* Fondo semitransparente para el área del gráfico */
+            position: relative;
+        }
+
+        /* Simulación de la línea del gráfico (línea base) */
+        .chart-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #555;
+        }
+    </style>
+</head>
+<body class="flex h-screen bg-gray-800">
+    
+    <div class="sidebar-bg p-4 flex flex-col space-y-2 overflow-y-auto">
+        <h3 class="text-white font-bold mb-4">Mi perfil</h3>
+        <ul class="text-sm">
+            <li class="p-2 hover:bg-gray-700 cursor-pointer rounded">🗓 Recordatorio</li>
+            <li class="p-2 hover:bg-gray-700 cursor-pointer rounded">💤 Rutina de sueño</li>
+            <li class="p-2 hover:bg-gray-700 cursor-pointer rounded">⭐ Mi racha</li>
+            <li class="p-2 hover:bg-gray-700 cursor-pointer rounded">💪🏼 Ejercicio</li>
+            <li class="p-2 hover:bg-gray-700 cursor-pointer rounded">🥦 Alimentación</li>
+            <li class="p-2 hover:bg-gray-700 cursor-pointer rounded">😄 Estado de ánimo</li>
+        </ul>
+        <div class="border-t border-gray-700 my-2"></div>
+        <h3 class="text-white font-bold mt-4 mb-2">Recomendaciones</h3>
+        <ul class="text-sm">
+            <li class="p-2 hover:bg-gray-700 cursor-pointer rounded">▶️ Motivaciòn</li>
+            <li class="p-2 hover:bg-gray-700 cursor-pointer rounded">🗊 Recetas</li>
+        </ul>
+    </div>
+
+    <div class="flex-1 dashboard-bg p-6 overflow-y-auto">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-4xl font-light text-gray-800">¡Bienvenida!</h1>
+                <div class="text-3xl bg-white p-2 rounded-full shadow-lg flex items-center space-x-2">
+                    <span role="img" aria-label="emoji feliz">😀</span>
+                    <span class="font-bold text-gray-800">9/10</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                
+                <div class="header-card p-6 rounded-xl shadow-lg flex items-center space-x-4">
+                    <span class="text-3xl" role="img" aria-label="fuego">🔥</span>
+                    <div>
+
+                        <p class="text-3xl font-bold text-gray-900">7 días</p>
+                    </div>
+                </div>
+
+                <div class="header-card p-6 rounded-xl shadow-lg flex items-center space-x-4">
+                    <div class="w-2/5">
+                        <div class="bg-gray-300 h-2 rounded-full mb-1">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-xl font-semibold text-gray-700">Pasos</p>
+                        <p class="text-3xl font-bold text-gray-900">5,678</p>
+                    </div>
+                </div>
+
+                <div class="header-card p-6 rounded-xl shadow-lg flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center">
+                         <div class="w-8 h-8 rounded-full bg-white"></div>
+                    </div>
+                    <div>
+                        <p class="text-xl font-semibold text-gray-700">Objetivos del día completados</p>
+                        <p class="text-3xl font-bold text-gray-900">3</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                
+                <div class="header-card p-6 rounded-xl shadow-lg flex flex-col items-center justify-center space-y-4">
+                    <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-200 border-4 border-pink-400">
+                    <img src="/Imagenes/Captura de pantalla 2025-12-10 221316.png" alt="Avatar del usuario" >
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Martha</h2>
+                    <p class="italic text-gray-600">Frase del día:</p>
+                    <p class="text-lg font-medium text-gray-900">"Un paso, a la vez."</p>
+                </div>
+                
+                <div class="header-card p-6 rounded-xl shadow-lg lg:col-span-2">
+                                
+                    
+
+                    <div class="chart-area border-b border-gray-400">
+                        <div class="absolute inset-y-0 left-0 flex flex-col justify-between text-xs text-gray-500 pr-2">
+                            <span>140</span>
+                            <span>120</span>
+                            <span>100</span>
+                            <span>80</span>
+                            <span>60</span>
+                            <span>40</span>
+                            <span>20</span>
+                            <span>0</span>
+                        </div>
+                        
+                        <div class="absolute inset-0 pl-10 pt-2">
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
+                                <polygon points="0,90 20,70 40,65 60,35 80,20 100,25 100,100 0,100" fill="rgba(192, 132, 252, 0.7)" />
+                                <polygon points="0,100 20,85 40,80 60,55 80,45 100,40 100,100 0,100" fill="rgba(236, 72, 153, 0.5)" />
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between text-sm text-gray-600 mt-2 pl-10">
+                        <span>Sueño</span>
+                        <span>Ejercicio</span>
+                        <span>Alimentación</span>
+                        <span>Ánimo</span>
+                            </div>
+                </div>
+            </div>
+
+            <div class="header-card p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Nota</h2>
+                <div class="space-y-3 text-gray-700">
+                    <p>
+                        Acumular al menos 60 minutos diarios de actividad física, que pueden ser continuos o en períodos más cortos a lo largo del día.
+                    </p>
+                    <p>
+                        Variedad: Combinar actividades cardiovasculares (caminar rápido, montar en bicicleta) con ejercicios de fortalecimiento muscular.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
