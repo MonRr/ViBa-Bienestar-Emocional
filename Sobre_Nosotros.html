@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - ViBa: Bienestar Emocional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Paleta de colores ajustada a la imagen y el tema */
+        :root {
+            --color-viba-green-light: #e6ffe6; /* Fondo de la franja superior */
+            --color-viba-green-medium: #88cc88; /* Botón e íconos */
+            --color-viba-green-dark: #38a169; /* Texto de acento */
+            --color-viba-text: #333333;
+        }
+        .bg-viba-light { background-color: var(--color-viba-green-light); }
+        .text-viba-dark { color: var(--color-viba-text); }
+        .bg-viba-medium { background-color: var(--color-viba-green-medium); }
+        .text-viba-medium { color: var(--color-viba-green-medium); }
+        /* Fuente Script para el subtítulo "Sobre ViBa" */
+        .font-script { font-family: 'Brush Script MT', 'cursive'; }
+        
+        /* Estilos para el efecto de sombra sutil en las tarjetas de imagen */
+        .image-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-viba-text">
+
+    <header class="shadow-md bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-8">
+                <span class="text-xl font-bold text-viba-medium">ViBa</span>
+                <nav class="hidden md:flex space-x-4 text-sm text-gray-600">
+                    <a href="#" class="hover:text-viba-medium">Inicio</a>
+                    <a href="#" class="font-semibold text-viba-dark border-b-2 border-viba-medium">Sobre Nosotros</a>
+                    <a href="#" class="hover:text-viba-medium">Contacto</a>
+                </nav>
+            </div>
+            <a href="#" class="bg-viba-medium hover:opacity-90 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-lg">
+                Ingresar
+            </a>
+        </div>
+    </header>
+
+    <section class="bg-white">
+        <div class="bg-viba-light pt-8 pb-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-center text-viba-dark mt-4 mb-2">
+                    BIENESTAR EMOCIONAL A DIARIO
+                </h1>
+                <p class="text-lg text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Descubre rutinas de ejercicio, alimentación y sueño basadas en tus emociones para alcanzar un equilibrio físico y mental.
+                </p>
+                <div class="text-center mb-16">
+                    <button class="bg-viba-medium hover:bg-viba-green-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        COMENZAR
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 pb-12 grid md:grid-cols-2 gap-10 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-5xl font-script text-viba-dark mb-4 mt-8 md:mt-0">
+                    Sobre ViBa
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    ViBa es una plataforma web dedicada a promover y cuidar tu salud de forma integral, con una perspectiva fuertemente emocional.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Cada día, registras tu estado de ánimo y nosotros generamos rutinas personalizadas de ejercicio, alimentación, y hábitos de sueño, adaptadas a tu estado. Además, generas puntos de racha por constancia, motivándote a mantener tus hábitos positivos. Queremos ayudarte a construir una vida más equilibrada, feliz y saludable.
+                </p>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <img src="/Imagenes/persona meditando.jpg" alt="Mujer meditando en un entorno natural y vibrante" class="rounded-xl shadow-2xl max-h-96 w-full object-cover md:w-auto transform hover:scale-[1.02] transition duration-500" />
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center text-viba-dark mb-12">
+                ¿Cómo funciona ViBa?
+            </h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="text-viba-medium text-4xl mb-4">🧘‍♀️</div>
+                    <h4 class="text-xl font-semibold mb-3">Registro Emocional Diario</h4>
+                    <p class="text-gray-600">Comienza el día registrando tu estado de ánimo actual. ViBa usa esta información clave para personalizar todas tus recomendaciones.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="text-viba-medium text-4xl mb-4">🏋️🥗🌙</div>
+                    <h4 class="text-xl font-semibold mb-3">Recomendaciones Integrales</h4>
+                    <p class="text-gray-600">Recibe planes específicos de ejercicio, ideas de alimentación (recetas) y consejos para una mejor rutina de sueño.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="text-viba-medium text-4xl mb-4">🔥</div>
+                    <h4 class="text-xl font-semibold mb-3">Rachas de Puntos</h4>
+                    <p class="text-gray-600">Mantén la consistencia y gana puntos por cada día que sigas tus rutinas. ¡Construye una racha ininterrumpida y desbloquea beneficios!</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center text-viba-dark mb-12">
+                ViBa en Acción
+            </h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                
+                <div class="image-card rounded-xl overflow-hidden shadow-md col-span-1">
+                    <img src="/Imagenes/mujer yoga.jpg" alt="Persona haciendo yoga con el sol de fondo" class="w-full h-48 object-cover" />
+                </div>
+
+                <div class="image-card rounded-xl overflow-hidden shadow-md col-span-1">
+                    <img src="/Imagenes/smothie.jpg" alt="Smoothie de frutas saludable" class="w-full h-48 object-cover" />
+                </div>
+
+                <div class="image-card rounded-xl overflow-hidden shadow-md col-span-1">
+                    <img src="/Imagenes/Captura de pantalla 2025-12-10 221316.png" alt="Pantalla laptop" class="w-full h-48 object-cover" />
+                </div>
+
+                <div class="image-card rounded-xl overflow-hidden shadow-md col-span-1">
+                    <img src="/Imagenes/hombre corriendo.jpg" alt="Hombre corriendo y escuchando música" class="w-full h-48 object-cover" />
+                </div>
+                
+                <div class="image-card rounded-xl overflow-hidden shadow-md col-span-1">
+                    <img src="/Imagenes/comida saludable.jpg" alt="Plato de comida fresca y saludable" class="w-full h-48 object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-viba-dark py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-300">
+            <p>&copy; 2024 ViBa - Plataforma de Salud y Bienestar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
